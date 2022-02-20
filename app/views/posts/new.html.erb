@@ -1,0 +1,26 @@
+<h1>New Post</h1>
+
+<%= form_with model: @post do |form| %>
+<p>
+    <%= form.label "title", "Name of Trip" %>
+    <%= form.text_field "title" %>
+</p>
+
+<p>
+    <%= form.label "description", "Trip Description" %>
+    <%= form.text_field "description" %>
+</p>
+
+<p>
+    <%= form.label "posted_on", "Trip Date"%>
+    <%= form.date_field "posted_on"%>
+
+</p>
+<%= form.hidden_field "place_id" %>
+<%= form.submit %>
+
+<p> 
+<%= button_to "Back to place", :back, :method => "get" %> </p>
+
+
+<% end %>

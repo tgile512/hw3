@@ -23,7 +23,7 @@ class PlacesController < ApplicationController
     end
 
     def update
-        @place = Company.find(params["id"])
+        @place = Place.find(params["id"])
         @place.update(params["place"])
         redirect_to "/places"
     end

@@ -13,6 +13,17 @@
 </ul>
 
 <a href = "/posts/new?place_id=<%= @place.id %>">Add a new post!</a>
-<br><br>
-<a href = "/places">Back to Trips</a>
+
+
+<p>
   
+  <%= button_to "Delete this place", @place,  method: :delete %>
+</p>
+
+
+<%= button_to "Back to all places", "/places", :method => "get" %>
+
+
+
+ 
+
